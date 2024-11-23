@@ -95,3 +95,30 @@
     background-color: #5a3c09; /* Invert button on hover */
     color: #fff;
   }
+
+  /* -------------------contact page----------------- */
+  .icon-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.icon-box .icon {
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    margin-right: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+}
+.second_sec{
+  background-color:white;
+  height: 80vh;
+  width: 100vw;
+}
+.map{
+  width: 100vw;
+}
