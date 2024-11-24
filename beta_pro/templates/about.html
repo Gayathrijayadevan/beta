@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: rgba(239,239,239,255); height: 100px;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="{% static 'images/beta logo.png' %}" alt="The Odin Project" style="width:120px;  height:90px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="about-us-section">
+        <h1 class="about-us-text">About Us</h1>
+    </div>
+
+    <div class="container text-center align-items-center mt-5">
+        <p class="lead mt-4">
+            The Beta Technologies is the ultimate resource we wish existed during our own coding journey. Not everyone has access to a computer science degree or expensive bootcamps—and honestly, not everyone needs them. This platform is crafted to empower self-learners, offering top-tier education that makes mastering coding both accessible and achievable.
+        </p>
+    </div>
+
+    <div class="container mt-5">
+        <h4 class="text-center mb-4">What you can expect from us</h4>
+    
+        <!-- Full roadmap section -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-1 text-center">
+                <img src="{% static 'images/full road map.jpeg' %}" alt="Full Roadmap Icon" class="img-fluid" style="width: 150px;">
+            </div>
+            <div class="col-md-11">
+                <h5>A full roadmap to becoming a developer</h5>
+                <p>Our free, comprehensive curriculum will equip you to be a full stack developer, no matter your current experience level.</p>
+            </div>
+        </div>
+    
+        <!-- Learn by doing section -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-1 text-center">
+                <img src="{% static 'images/learn by doing.jpeg' %}" alt="Learn by Doing Icon" class="img-fluid" style="width: 150px;">
+            </div>
+            <div class="col-md-11">
+                <h5>Learn by doing</h5>
+                <p>The most effective learning happens while building projects, so we have strategically placed them throughout our curriculum.</p>
+            </div>
+        </div>
+    
+        <!-- Receive support section -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-1 text-center">
+                <img src="{% static 'images/recevie support.jpeg' %}" alt="Receive Support Icon" class="img-fluid" style="width: 150px;">
+            </div>
+            <div class="col-md-11">
+                <h5>Receive support from others</h5>
+                <p><b><u>The maintainers of the curriculum</u></b> run a Discord community, with the help of countless other volunteers, where you can receive help with anything in our curriculum.</p>
+            </div>
+        </div>
+    
+        <!-- Open source section -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-1 text-center">
+                <img src="{% static 'images/open community.jpeg' %}" alt="Open Source Community Icon" class="img-fluid" style="width: 150px;">
+            </div>
+            <div class="col-md-11">
+                <h5>Open source and community driven</h5>
+                <p>You can deepen your understanding and improve your GitHub skills by contributing to our open source curriculum and helping others in our Discord community.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <div class="banner">
+          <div class="banner-text">
+                <div class="banner-icon"><img src="{% static 'images/yellow logo.png' %}" alt=""></div>
+            <div>
+              <h5>Best Learning Platform</h5>
+              <p>Study with the best certified professional teachers.</p>
+            </div>
+          </div>
+          <a href="#" class="banner-button">Register Now</a>
+        </div>
+      </div>
+      
+    <!-- Footer -->
+<footer class=" py-5" style="background-color: rgba(239,239,239,255);">
+    <div class="container ">
+        <div class="row">
+  
+            <div class="col-md-4 " >
+                <img src="{% static 'images/beta logo.png' %}" alt="Logo" class="mb-5" style="width: 35%; height: 150px;">
+                <div class="mb-5">
+                    <p>High quality coding education maintained by an open source community.</p>
+                </div>
+                <div class="d-flex justify-content-start mb-5">
+                    <a href="#" class="text-dark mr-3"><img src="{% static 'images/footer-icons.png' %}" alt=""></a>
+                </div>
+            </div>
+        
+            <div class="col-md-2 mb-4" style="margin-top: 50px;">
+                <h6 class="text-uppercase">About us</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-dark">About</a></li>
+                    <li><a href="#" class="text-dark">Team</a></li>
+                    <li><a href="#" class="text-dark">Blog</a></li>
+                    <li><a href="#" class="text-dark">Success Stories</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 mb-4"style="margin-top: 50px;">
+                <h6 class="text-uppercase ">Support</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-dark">FAQ</a></li>
+                    <li><a href="#" class="text-dark">Contribute</a></li>
+                    <li><a href="#" class="text-dark">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 mb-4"style="margin-top: 50px;">
+                <h6 class="text-uppercase ">Guides</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-dark">Community guides</a></li>
+                    <li><a href="#" class="text-dark">Installation guides</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 mb-4"style="margin-top: 50px;">
+                <h6 class="text-uppercase ">Legal</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-dark">Terms</a></li>
+                    <li><a href="#" class="text-dark">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="">
+            <small class="text-muted">&copy; 2024 Beta Technologies . All rights reserved.</small>
+        </div>
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

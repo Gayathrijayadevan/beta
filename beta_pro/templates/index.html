@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: rgba(239,239,239,255); height: 80px;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="{% static 'images/beta logo.png' %}" alt="The Odin Project" style="width:110px; ">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+  
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/caro_pic1.jpg' %}" alt="Los Angeles" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/caro_pic2.jpg' %}" alt="Chicago" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/caro_pic3.jpg' %}" alt="New York" class="d-block w-100">
+      </div>
+    </div>
+  
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  
+  <div class="last_carosel">
+    <div class="last_caro">
+      <div class="conts"><img src="{% static 'images/nactect.png' %}" alt=""></div>
+      <div class="conts"><img src="{% static 'images/skill-india.jpg' %}" alt=""></div>
+      <div class="conts"><img src="{% static 'images/iib-education.jpg' %}" alt=""></div>
+      <div class="conts"><img src="{% static 'images/nsdc.jpg' %}" alt=""></div>
+      <div class="conts"><img src="{% static 'images/pearson.jpg' %}" alt=""></div>
+      <div class="conts"><img src="{% static 'images/people-cert.jpg' %}" alt=""></div>
+    </div>
+  </div>
+
+  <div class="container-fluid text-center mt-5"style="background-color: rgba(239,239,239,255); margin-bottom 20px;">
+    <span class="fw-bold"><h1>Behind The Magic</h1></span></p>
+    <p>Discover the website we always wished for during our learning journey! We meticulously explore the web to handpick top-notch resources, curating them in a seamless, step-by-step flow to supercharge your learning experience.</p>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <img src="{% static 'images/how it works 1.jpeg' %}" alt="Learn" class="mb-3" style="width: 170px;">
+            <h5>Learn</h5>
+            <p>Learn from a curriculum with the best curated online tutorials, blogs, and courses.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/how it works 3.jpeg' %}" alt="Build" class="mb-3" style="width: 170px;">
+            <h5>Build</h5>
+            <p>Build dozens of portfolio-worthy projects along the way, from simple scripts to full programs and deployed websites.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/how it works 2.jpeg' %}" alt="Connect" class="mb-3" style="width: 170px;">
+            <h5>Connect</h5>
+            <p>You're not alone. Learn and get help from our friendly community of beginner and experienced developers.</p>
+        </div>
+    </div>
+</div>
+
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Popular Courses</h2>
+        <div class="row g-4">
+            <!-- Course 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card course-card shadow">
+                    <img src="https://via.placeholder.com/300x200" alt="AWS" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">AWS For Absolute Beginners</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Course 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card course-card shadow">
+                    <img src="https://via.placeholder.com/300x200" alt="RedHat" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">RedHat Certified Engineer</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Course 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card course-card shadow">
+                    <img src="https://via.placeholder.com/300x200" alt="Windows Server" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Windows Server Administration</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Course 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card course-card shadow">
+                    <img src="https://via.placeholder.com/300x200" alt="CompTIA" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">CompTIA Network+</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card course-card shadow">
+                    <img src="https://via.placeholder.com/300x200" alt="CompTIA" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">CompTIA Network+</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card course-card shadow">
+                    <img src="https://via.placeholder.com/300x200" alt="CompTIA" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">CompTIA Network+</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class=" py-5" style="background-color: rgba(239,239,239,255);">
+  <div class="container ">
+      <div class="row">
+
+          <div class="col-md-4 " >
+              <img src="{% static 'images/beta logo.png' %}" alt="Logo" class="mb-5" style="width: 35%; height: 150px;">
+              <div class="mb-5">
+                  <p>High quality coding education maintained by an open source community.</p>
+              </div>
+              <div class="d-flex justify-content-start mb-5">
+                  <a href="#" class="text-dark mr-3"><img src="{% static 'images/footer-icons.png' %}" alt=""></a>
+              </div>
+          </div>
+      
+          <div class="col-md-2 mb-4" style="margin-top: 50px;">
+              <h6 class="text-uppercase">About us</h6>
+              <ul class="list-unstyled">
+                  <li><a href="#" class="text-dark">About</a></li>
+                  <li><a href="#" class="text-dark">Team</a></li>
+                  <li><a href="#" class="text-dark">Blog</a></li>
+                  <li><a href="#" class="text-dark">Success Stories</a></li>
+              </ul>
+          </div>
+          <div class="col-md-2 mb-4"style="margin-top: 50px;">
+              <h6 class="text-uppercase ">Support</h6>
+              <ul class="list-unstyled">
+                  <li><a href="#" class="text-dark">FAQ</a></li>
+                  <li><a href="#" class="text-dark">Contribute</a></li>
+                  <li><a href="#" class="text-dark">Contact us</a></li>
+              </ul>
+          </div>
+          <div class="col-md-2 mb-4"style="margin-top: 50px;">
+              <h6 class="text-uppercase ">Guides</h6>
+              <ul class="list-unstyled">
+                  <li><a href="#" class="text-dark">Community guides</a></li>
+                  <li><a href="#" class="text-dark">Installation guides</a></li>
+              </ul>
+          </div>
+          <div class="col-md-2 mb-4"style="margin-top: 50px;">
+              <h6 class="text-uppercase ">Legal</h6>
+              <ul class="list-unstyled">
+                  <li><a href="#" class="text-dark">Terms</a></li>
+                  <li><a href="#" class="text-dark">Privacy</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="">
+          <small class="text-muted">&copy; 2024 Beta Technologies . All rights reserved.</small>
+      </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
