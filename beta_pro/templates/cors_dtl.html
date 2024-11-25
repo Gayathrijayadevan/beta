@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Details</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/sty.css' %}">
     <style>
         .course-card {
             border-radius: 10px;
@@ -19,26 +21,123 @@
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg" style="background-color:rgba(11,19,32,255); height: 100px;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="{% static 'images/beta logo.png' %}" alt="The Odin Project" style="width:150px;  height:100px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link"style="color:white;" href="../home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"style="color:white;" href="../about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:white;" href="../contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container py-5">
-        <h2 class="text-center mb-4">Course Details</h2>
+        <h2 class="text-center mb-4">Course Detail</h2>
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card course-card">
-                    <img src="path-to-image.jpg" alt="Course Image" class="card-img-top" id="courseImg">
-                    <div class="card-body">
-                        <h3 class="card-title" id="courseName">Course Name: AWS for Beginners</h3>
+            <div class="col-md-5">
+                <img src="{{courses.img.url}}" alt="Course Image" class="card-img-top" id="courseImg">
+            </div>        
+                    <div class="col-md-7 card-body">
+                        <h3 class="card-title" id="courseName">{{ courses.c_name }}</h3>
                         <p class="card-text">
-                            <strong>Course ID:</strong> <span id="courseId">C101</span><br>
-                            <strong>Description:</strong> <span id="courseDescription">Learn the basics of Amazon Web Services and cloud computing.</span><br>
-                            <strong>Duration:</strong> <span id="courseDuration">30</span> hours<br>
-                            <strong>Course Fees:</strong> $<span id="courseFees">500</span>
+                            <br> <span id="courseDescription">{{courses.dis}}</span><br> <br>
+                            <strong>Duration:</strong> <span id="courseDuration">{{courses.duration}}</span>Months<br><br>
+                            <strong>Course Fees:</strong>₹<span id="courseFees">{{courses.Course_fees}}</span>
                         </p>
                     </div>
-                </div>
-            </div>
         </div>
     </div>
 
+    <div class="container">
+        <div class="enquiry-form">
+            <div class="form-title">ENQUIRY</div>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name" required name="name">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email" required name="email">
+                </div>
+                <div class="mb-3">
+                    <input type="tel" class="form-control" placeholder="Phone" required name="phone">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Message" required name="message"></textarea>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="subject" required name="subject"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn submit-btn w-100">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class=" py-5" style="background-color:rgba(11,19,32,255); color: white;">
+        <div class="container ">
+            <div class="row">
+      
+                <div class="col-md-4 " >
+                    <img src="{% static 'images/beta logo.png' %}" alt="Logo" class="mb-5" style="width: 35%; height: 150px;">
+                    <div class="mb-5">
+                        <p>High quality coding education maintained by an open source community.</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-2 mb-4" style="margin-top: 50px;">
+                    <h6 class="text-uppercase">About us</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">About</li>
+                        <li><a href="#" class="text-light">Team</a></li>
+                        <li><a href="#" class="text-light">Blog</a></li>
+                        <li><a href="#" class="text-light">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4"style="margin-top: 50px;">
+                    <h6 class="text-uppercase ">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">FAQ</a></li>
+                        <li><a href="#" class="text-light">Contribute</a></li>
+                        <li><a href="#" class="text-light">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4"style="margin-top: 50px;">
+                    <h6 class="text-uppercase ">Guides</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">Community guides</a></li>
+                        <li><a href="#" class="text-light">Installation guides</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4"style="margin-top: 50px;">
+                    <h6 class="text-uppercase ">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">Terms</a></li>
+                        <li><a href="#" class="text-light">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="">
+                <small class="text-light">&copy; 2024 Beta Technologies . All rights reserved.</small>
+            </div>
+        </div>
+      </footer>
+      
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

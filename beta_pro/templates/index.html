@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg" style="background-color: rgba(239,239,239,255); height: 80px;">
+    <nav class="navbar navbar-expand-lg" style="background-color:rgba(11,19,32,255); height: 80px;">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="{% static 'images/beta logo.png' %}" alt="The Odin Project" style="width:110px; ">
@@ -21,17 +21,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="">Home</a>
+                        <a class="nav-link" style="color: white;" href="">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about">About</a>
+                        <a class="nav-link" style="color: white;" href="about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact">Contact</a>
+                        <a class="nav-link" style="color: white;" href="contact">Contact</a>
                     </li>
-
                 </ul>
             </div>
+            <form class="form-inline my-2 my-lg-0 search_box">
+                <input class="form-control mr-sm-2" placeholder="search" type="search">
+            </form>
         </div>
     </nav>
 
@@ -78,21 +80,21 @@
     </div>
   </div>
 
-  <div class="container-fluid text-center mt-5"style="background-color: rgba(239,239,239,255); margin-bottom 20px;">
-    <span class="fw-bold"><h1>Behind The Magic</h1></span></p>
+  <div class="container-fluid text-center mt-5 text-dark"style="background-color:rgba(230,234,233,255); margin-bottom 20px;">
+    <span class="fw-bold text-dark"><h1>BEHIND THE MAGIC</h1></span></p>
     <p>Discover the website we always wished for during our learning journey! We meticulously explore the web to handpick top-notch resources, curating them in a seamless, step-by-step flow to supercharge your learning experience.</p>
     <div class="row mt-4">
-        <div class="col-md-4">
+        <div class="col-md-4 text-dark">
             <img src="{% static 'images/how it works 1.jpeg' %}" alt="Learn" class="mb-3" style="width: 170px;">
             <h5>Learn</h5>
             <p>Learn from a curriculum with the best curated online tutorials, blogs, and courses.</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 text-dark">
             <img src="{% static 'images/how it works 3.jpeg' %}" alt="Build" class="mb-3" style="width: 170px;">
             <h5>Build</h5>
             <p>Build dozens of portfolio-worthy projects along the way, from simple scripts to full programs and deployed websites.</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 text-dark">
             <img src="{% static 'images/how it works 2.jpeg' %}" alt="Connect" class="mb-3" style="width: 170px;">
             <h5>Connect</h5>
             <p>You're not alone. Learn and get help from our friendly community of beginner and experienced developers.</p>
@@ -100,117 +102,70 @@
     </div>
 </div>
 
-<section class="py-5">
-    <div class="container text-center">
-        <h2 class="mb-4">Popular Courses</h2>
-        <div class="row g-4">
-            <!-- Course 1 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card course-card shadow">
-                    <img src="https://via.placeholder.com/300x200" alt="AWS" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">AWS For Absolute Beginners</h5>
+<section class="container mt-5">
+    <h2 class="text-center mb-4">Popular Courses</h2>
+    <div class="row">
+        {% for c in cours %}
+        <div class="col-md-4">
+            <a href="course_dtl/{{c.pk}}" style="text-decoration: none;">
+                <div class=" card">
+                    <img src="{{c.img.url}}" class="card-img-top" alt="Course">
+                    <div class="card-body text-center">
+                        <p class="card-text">{{c.c_name}}</p>
                     </div>
                 </div>
-            </div>
-            <!-- Course 2 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card course-card shadow">
-                    <img src="https://via.placeholder.com/300x200" alt="RedHat" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">RedHat Certified Engineer</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Course 3 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card course-card shadow">
-                    <img src="https://via.placeholder.com/300x200" alt="Windows Server" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Windows Server Administration</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Course 4 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card course-card shadow">
-                    <img src="https://via.placeholder.com/300x200" alt="CompTIA" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">CompTIA Network+</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="card course-card shadow">
-                    <img src="https://via.placeholder.com/300x200" alt="CompTIA" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">CompTIA Network+</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="card course-card shadow">
-                    <img src="https://via.placeholder.com/300x200" alt="CompTIA" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">CompTIA Network+</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </a>
+        </div>    
+        {% endfor %}
     </div>
+    <a href="view_course"><button class="btn btn-outline-dark" style="margin:20px; margin-left: 45%;">EXPLORE MORE COURSES</button></a>
 </section>
 
-<!-- Footer -->
-<footer class=" py-5" style="background-color: rgba(239,239,239,255);">
+<footer class=" py-5" style="background-color:rgba(11,19,32,255);">
   <div class="container ">
       <div class="row">
 
           <div class="col-md-4 " >
               <img src="{% static 'images/beta logo.png' %}" alt="Logo" class="mb-5" style="width: 35%; height: 150px;">
-              <div class="mb-5">
+              <div class="mb-5 text-light">
                   <p>High quality coding education maintained by an open source community.</p>
-              </div>
-              <div class="d-flex justify-content-start mb-5">
-                  <a href="#" class="text-dark mr-3"><img src="{% static 'images/footer-icons.png' %}" alt=""></a>
               </div>
           </div>
       
           <div class="col-md-2 mb-4" style="margin-top: 50px;">
-              <h6 class="text-uppercase">About us</h6>
+              <h6 class="text-uppercase text-light">About us</h6>
               <ul class="list-unstyled">
-                  <li><a href="#" class="text-dark">About</a></li>
-                  <li><a href="#" class="text-dark">Team</a></li>
-                  <li><a href="#" class="text-dark">Blog</a></li>
-                  <li><a href="#" class="text-dark">Success Stories</a></li>
+                  <li><a href="#" class="text-light">About</a></li>
+                  <li><a href="#" class="text-light">Team</a></li>
+                  <li><a href="#" class="text-light">Blog</a></li>
+                  <li><a href="#" class="text-light">Success Stories</a></li>
               </ul>
           </div>
           <div class="col-md-2 mb-4"style="margin-top: 50px;">
-              <h6 class="text-uppercase ">Support</h6>
+              <h6 class="text-uppercase text-light">Support</h6>
               <ul class="list-unstyled">
-                  <li><a href="#" class="text-dark">FAQ</a></li>
-                  <li><a href="#" class="text-dark">Contribute</a></li>
-                  <li><a href="#" class="text-dark">Contact us</a></li>
+                  <li><a href="#" class="text-light">FAQ</a></li>
+                  <li><a href="#" class="text-light">Contribute</a></li>
+                  <li><a href="#" class="text-light">Contact us</a></li>
               </ul>
           </div>
           <div class="col-md-2 mb-4"style="margin-top: 50px;">
-              <h6 class="text-uppercase ">Guides</h6>
+              <h6 class="text-uppercase text-light ">Guides</h6>
               <ul class="list-unstyled">
-                  <li><a href="#" class="text-dark">Community guides</a></li>
-                  <li><a href="#" class="text-dark">Installation guides</a></li>
+                  <li><a href="#" class="text-light">Community guides</a></li>
+                  <li><a href="#" class="text-light">Installation guides</a></li>
               </ul>
           </div>
           <div class="col-md-2 mb-4"style="margin-top: 50px;">
-              <h6 class="text-uppercase ">Legal</h6>
+              <h6 class="text-uppercase text-light">Legal</h6>
               <ul class="list-unstyled">
-                  <li><a href="#" class="text-dark">Terms</a></li>
-                  <li><a href="#" class="text-dark">Privacy</a></li>
+                  <li><a href="#" class="text-light ">Terms</a></li>
+                  <li><a href="#" class="text-light">Privacy</a></li>
               </ul>
           </div>
       </div>
       <div class="">
-          <small class="text-muted">&copy; 2024 Beta Technologies . All rights reserved.</small>
+          <small class="text-light">&copy; 2024 Beta Technologies . All rights reserved.</small>
       </div>
   </div>
 </footer>
