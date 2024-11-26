@@ -20,7 +20,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link"style="color:white;" href="home">Home</a>
+                        <a class="nav-link"style="color:white;" href="../">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"style="color:white;" href="../about">About</a>
@@ -40,10 +40,10 @@
     <section class="container mt-5">
         <div class="row">
             {% for vc in v_courses %}
-            <div class="col-md-4">
+            <div class="col-md-4" style="margin-top: 20px;">
                 <a href="course_dtl/{{vc.pk}}" style="text-decoration: none;">
                     <div class=" card">
-                        <img src="{{vc.img.url}}" class="card-img-top " alt="Course">
+                        <img src="{{vc.img.url}}" class="card-img-top "style="height:200px;" alt="Course">
                         <div class="card-body text-center">
                             <p class="card-text">{{vc.c_name}}</p>
                         </div>

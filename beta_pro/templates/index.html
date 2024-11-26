@@ -80,24 +80,41 @@
     </div>
   </div>
 
-  <div class="container-fluid text-center mt-5 text-dark"style="background-color:rgba(230,234,233,255); margin-bottom 20px;">
-    <span class="fw-bold text-dark"><h1>BEHIND THE MAGIC</h1></span></p>
-    <p>Discover the website we always wished for during our learning journey! We meticulously explore the web to handpick top-notch resources, curating them in a seamless, step-by-step flow to supercharge your learning experience.</p>
-    <div class="row mt-4">
-        <div class="col-md-4 text-dark">
-            <img src="{% static 'images/how it works 1.jpeg' %}" alt="Learn" class="mb-3" style="width: 170px;">
-            <h5>Learn</h5>
-            <p>Learn from a curriculum with the best curated online tutorials, blogs, and courses.</p>
+  <div class="container-fluid text-center mt-5 text-dark" style="background-color: #f9f9f9; padding: 50px 20px;">
+    <!-- Heading Section -->
+    <h1 class="fw-bold" style="color: #2c3e50; font-size: 2.5rem;">BEHIND THE MAGIC</h1>
+    <p class="mt-3" style="color: #34495e; font-size: 1.2rem;">
+        Discover the website we always wished for during our learning journey! 
+        We meticulously explore the web to handpick top-notch resources, curating them in a seamless, step-by-step flow to supercharge your learning experience.
+    </p>
+
+    <!-- Content Section -->
+    <div class="row mt-5 text-dark">
+        <!-- Learn Section -->
+        <div class="col-md-4">
+            <div class="card shadow-sm" style="border: none; background-color: #ffffff; padding: 20px; border-radius: 10px; transition: transform 0.3s;">
+                <img src="{% static 'images/learn.jpg' %}" alt="Learn" class="mb-3" style="width: 65%; height: 150px; margin-left: 20%;">
+                <h5 style="color: #2c3e50; font-weight: bold;">Learn</h5>
+                <p style="color: #7f8c8d; font-size: 0.95rem;">Learn from a curriculum with the best curated online tutorials, blogs, and courses.</p>
+            </div>
         </div>
-        <div class="col-md-4 text-dark">
-            <img src="{% static 'images/how it works 3.jpeg' %}" alt="Build" class="mb-3" style="width: 170px;">
-            <h5>Build</h5>
-            <p>Build dozens of portfolio-worthy projects along the way, from simple scripts to full programs and deployed websites.</p>
+
+        <!-- Build Section -->
+        <div class="col-md-4">
+            <div class="card shadow-sm" style="border: none; background-color: #ffffff; padding: 20px; border-radius: 10px; transition: transform 0.3s;">
+                <img src="{% static 'images/build.jpg' %}" alt="Build" class="mb-3" style="width: 65%; height:150px;margin-left: 20%;">
+                <h5 style="color: #2c3e50; font-weight: bold;">Build</h5>
+                <p style="color: #7f8c8d; font-size: 0.95rem;">Build dozens of portfolio-worthy projects along the way, from simple scripts to full programs and deployed websites.</p>
+            </div>
         </div>
-        <div class="col-md-4 text-dark">
-            <img src="{% static 'images/how it works 2.jpeg' %}" alt="Connect" class="mb-3" style="width: 170px;">
-            <h5>Connect</h5>
-            <p>You're not alone. Learn and get help from our friendly community of beginner and experienced developers.</p>
+
+        <!-- Connect Section -->
+        <div class="col-md-4">
+            <div class="card shadow-sm" style="border: none; background-color: #ffffff; padding: 20px; border-radius: 10px; transition: transform 0.3s;">
+                <img src="{% static 'images/connect.jpg' %}" alt="Connect" class="mb-3" style="width: 65%; height:150px;margin-left: 20%;">
+                <h5 style="color: #2c3e50; font-weight: bold;">Connect</h5>
+                <p style="color: #7f8c8d; font-size: 0.95rem;">You're not alone. Learn and get help from our friendly community of beginner and experienced developers.</p>
+            </div>
         </div>
     </div>
 </div>
@@ -109,7 +126,7 @@
         <div class="col-md-4">
             <a href="course_dtl/{{c.pk}}" style="text-decoration: none;">
                 <div class=" card">
-                    <img src="{{c.img.url}}" class="card-img-top" alt="Course">
+                    <img src="{{c.img.url}}" class="card-img-top" style="height:200px;" alt="Course">
                     <div class="card-body text-center">
                         <p class="card-text">{{c.c_name}}</p>
                     </div>

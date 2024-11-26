@@ -12,6 +12,16 @@ def about(req):
     return render(req,'about.html')
 
 def courses_dtl(req,c_id):
+    if req.method=='POST':
+        name=req.POST['name']
+        email=req.POST['email']
+        message=req.POST['message']
+        subject=req.POST['subject']
+        phone=req.POST['phone']
+        data=Contact.objects.create(name=name,email=email,message=message,subject=subject,Phone=phone)
+        data.save()
+        return redirect(index)
+    
     data=Course.objects.get(pk=c_id)
     return render (req,'cors_dtl.html',{'courses':data})
 
@@ -32,16 +42,4 @@ def view_course(req,):
     data=Course.objects.all()
     return render(req,'view_course.html',{'v_courses':data})
 
-def enquiry(req):
-    if req.method=='POST':
-        name=req.POST['name']
-        email=req.POST['email']
-        message=req.POST['message']
-        subject=req.POST['subject']
-        phone=req.POST['phone']
-        data=Contact.objects.create(name=name,email=email,message=message,subject=subject,Phone=phone)
-        data.save()
-        return redirect(enquiry)
-    else:
-        return render (req,'cors_dtl.html')
-    
+
