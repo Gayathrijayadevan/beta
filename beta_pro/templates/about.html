@@ -41,60 +41,70 @@
         <h1 class="about-us-text">About Us</h1>
     </div>
 
-    <div class="container text-center align-items-center mt-5">
-        <p class="lead mt-4">
+    <div class="container text-center align-items-center mt-5 py-5" style="background-color: #f9f9f9; border-radius: 10px;">
+        <p class="lead mt-4" style="font-size: 1.2rem; color: #2c3e50; line-height: 1.8;">
             The Beta Technologies is the ultimate resource we wish existed during our own coding journey. Not everyone has access to a computer science degree or expensive bootcamps—and honestly, not everyone needs them. This platform is crafted to empower self-learners, offering top-tier education that makes mastering coding both accessible and achievable.
         </p>
     </div>
-
+    
     <div class="container mt-5">
-        <h4 class="text-center mb-4">What you can expect from us</h4>
+        <h4 class="text-center mb-5" style="color: #34495e; font-weight: bold;">What you can expect from us</h4>
+        
+        <div class="row">
+            <!-- Full Roadmap Card -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm" style="border-radius: 10px; overflow: hidden;">
+                    <img src="{% static 'images/full road map.jpeg' %}" alt="Full Roadmap Icon" class="card-img-top" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #2c3e50; font-weight: bold;">A full roadmap to becoming a developer</h5>
+                        <p class="card-text" style="color: #7f8c8d;">
+                            Our free, comprehensive curriculum will equip you to be a full stack developer, no matter your current experience level.
+                        </p>
+                    </div>
+                </div>
+            </div>
     
-        <!-- Full roadmap section -->
-        <div class="row align-items-center mb-4">
-            <div class="col-md-1 text-center">
-                <img src="{% static 'images/full road map.jpeg' %}" alt="Full Roadmap Icon" class="img-fluid" style="width: 150px;">
+            <!-- Learn by Doing Card -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm" style="border-radius: 10px; overflow: hidden;">
+                    <img src="{% static 'images/learn by doing.jpeg' %}" alt="Learn by Doing Icon" class="card-img-top" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #2c3e50; font-weight: bold;">Learn by doing</h5>
+                        <p class="card-text" style="color: #7f8c8d;">
+                            The most effective learning happens while building projects, so we have strategically placed them throughout our curriculum.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-11">
-                <h5>A full roadmap to becoming a developer</h5>
-                <p>Our free, comprehensive curriculum will equip you to be a full stack developer, no matter your current experience level.</p>
-            </div>
-        </div>
     
-        <!-- Learn by doing section -->
-        <div class="row align-items-center mb-4">
-            <div class="col-md-1 text-center">
-                <img src="{% static 'images/learn by doing.jpeg' %}" alt="Learn by Doing Icon" class="img-fluid" style="width: 150px;">
+            <!-- Receive Support Card -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm" style="border-radius: 10px; overflow: hidden;">
+                    <img src="{% static 'images/recevie support.jpeg' %}" alt="Receive Support Icon" class="card-img-top" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #2c3e50; font-weight: bold;">Receive support from others</h5>
+                        <p class="card-text" style="color: #7f8c8d;">
+                            <b><u>The maintainers of the curriculum</u></b> run a Discord community, with the help of countless other volunteers, where you can receive help with anything in our curriculum.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-11">
-                <h5>Learn by doing</h5>
-                <p>The most effective learning happens while building projects, so we have strategically placed them throughout our curriculum.</p>
-            </div>
-        </div>
     
-        <!-- Receive support section -->
-        <div class="row align-items-center mb-4">
-            <div class="col-md-1 text-center">
-                <img src="{% static 'images/recevie support.jpeg' %}" alt="Receive Support Icon" class="img-fluid" style="width: 150px;">
-            </div>
-            <div class="col-md-11">
-                <h5>Receive support from others</h5>
-                <p><b><u>The maintainers of the curriculum</u></b> run a Discord community, with the help of countless other volunteers, where you can receive help with anything in our curriculum.</p>
-            </div>
-        </div>
-    
-        <!-- Open source section -->
-        <div class="row align-items-center mb-4">
-            <div class="col-md-1 text-center">
-                <img src="{% static 'images/open community.jpeg' %}" alt="Open Source Community Icon" class="img-fluid" style="width: 150px;">
-            </div>
-            <div class="col-md-11">
-                <h5>Open source and community driven</h5>
-                <p>You can deepen your understanding and improve your GitHub skills by contributing to our open source curriculum and helping others in our Discord community.</p>
+            <!-- Open Source Card -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm" style="border-radius: 10px; overflow: hidden;">
+                    <img src="{% static 'images/open community.jpeg' %}" alt="Open Source Community Icon" class="card-img-top" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #2c3e50; font-weight: bold;">Open source and community-driven</h5>
+                        <p class="card-text" style="color: #7f8c8d;">
+                            You can deepen your understanding and improve your GitHub skills by contributing to our open source curriculum and helping others in our Discord community.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
+    
     <div class="container my-4">
         <div class="banner">
           <div class="banner-text">
